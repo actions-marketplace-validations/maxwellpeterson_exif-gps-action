@@ -1,0 +1,5 @@
+name: 'Remove EXIF GPS Tags'
+description: 'Remove EXIF GPS tags from media files before publishing them'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
