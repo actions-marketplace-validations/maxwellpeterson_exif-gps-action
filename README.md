@@ -6,7 +6,7 @@ The original use case for this action was scrubbing images of potentially sensit
 
 Of course, if the source repository is also public, then by the time this action runs it's already a bit late. At the very least, it adds some level of privacy through obscurity. If you're really concerned about location data making it into git history, a pre-commit hook is probably a better tool for the job. That being said, if someone really wants to figure out where you're located, they probably don't need to comb through EXIF tags to do so, [unless you're an international fugitive](https://en.wikipedia.org/wiki/Exif#Privacy_and_security).
 
-This action uses the excellent [`exiftool`](https://exiftool.org/) for modifying files, and all it does is run `exiftool -r -gps:all= -overwrite_original .` in the root of the repository. That's it! Creating an action for this makes it ridiculously easy to add to any project, since `exiftool` is not provided by the default action runner environments.
+This action uses [exiftool](https://exiftool.org/) for modifying files, and all it does is run `exiftool -r -gps:all= -overwrite_original .` in the root of the repository. That's it! Creating an action for this makes it ridiculously easy to add to any project, since exiftool is not provided by the default action runner environments.
 
 ## Inputs
 
